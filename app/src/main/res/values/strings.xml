@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Translate</string>
+    <string name="not_implemented">Not implemented</string>
+    <string name="search">Search</string>
+    <string name="search_words">Search words</string>
+    <string name="sth_went_wrong">Something went wrong. Please try again later.</string>
+    <string name="https">https:%s</string>
+    <string name="details">Details</string>
+</resources>

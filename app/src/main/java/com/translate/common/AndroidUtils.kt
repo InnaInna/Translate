@@ -1,0 +1,42 @@
+package com.translate.common
+
+import android.app.Activity
+import android.content.Context
+import android.util.Log
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+
+object AndroidUtils {
+
+    fun hideKeyboard(activity: Activity?) {
+        val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        val view = activity?.currentFocus
+        imm?.let {
+            if (view != null) {
+                imm.hideSoftInputFromWindow(view.windowToken, 0)
+                view.post(view::clearFocus)
+            } else {
+                imm.hideSoftInputFromWindow(activity?.window?.decorView?.windowToken, 0)
+            }
+        }
+    }
+
+    fun hideKeyboard(view: View?) {
+        view?.let { itView ->
+            try {
+                val imm =
+                    itView.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+                imm?.let { itIMM ->
+                    if (itIMM.isActive) itIMM.hideSoftInputFromWindow(view.windowToken, 0)
+                }
+            } catch (e: Exception) {
+                Log.e("translate_log", e.message)
+            }
+        }
+    }
+
+    fun showKeyboard(activity: Activity?) {
+        val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        imm?.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
+    }
+}

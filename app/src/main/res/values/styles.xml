@@ -1,0 +1,44 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarText" parent="Widget.AppCompat.Toolbar">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ThemeOverlay.Toolbar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
+    <style name="Text" parent="android:Widget.TextView" />
+
+    <style name="Text.Title">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text.Title.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Standard">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text.Standard.Gray">
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+</resources>
