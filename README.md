@@ -2,7 +2,8 @@
 
 This for finding word translation to Russian and reading the definition in English.
 
-##Architecture
+## Architecture
+
 **Presentation layer**
 The presentation folder for displaying data from data and interacting with user.
 
@@ -15,7 +16,8 @@ The data folder for serving network requests or accessing to the database. Provi
 **Common folder**
 The common folder used for constances, utilities.
 
-##Dependencies
+## Dependencies
+
 - Jetpack:
   * Android KTX - provide concise, idiomatic Kotlin to Jetpack and Android platform APIs.
   * AndroidX - major improvement to the original Android Support Library, which is no longer maintained.
